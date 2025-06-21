@@ -8,7 +8,7 @@ use std::{
 fn main() {
     let path = args().nth(1).expect("need program to parse");
 
-    let mut program: Vec<u8> = vec![];
+    let mut program: Vec<u8> = Vec::with_capacity(32 * 1024);
     program.extend(
         b"#include <stdint.h>
 #include <stdio.h>
